@@ -62,10 +62,56 @@ const observer = new IntersectionObserver(
 );
 
 const animatedBlocks = document.querySelectorAll(
-    '.layer__card, .gallery__item, .ethics, .pulse'
+    '.layer__card, .gallery__item, .ethics, .pulse, .sequence, .algorithms, .metrics, .sequence__page, .algorithm__card, .metric'
 );
 
 animatedBlocks.forEach((block) => {
     block.classList.add('will-animate');
     observer.observe(block);
+});
+
+const metricValues = document.querySelectorAll('.metric__value');
+
+const animateMetricValue = (element) => {
+    const target = parseFloat(element.dataset.target || '0');
+
+    if (Number.isNaN(target)) {
+        return;
+    }
+
+    const scaledTarget = Math.round(target * 100);
+    let current = 0;
+
+    element.textContent = '0.00%';
+
+    const interval = setInterval(() => {
+        current += 1;
+
+        if (current >= scaledTarget) {
+            current = scaledTarget;
+        }
+
+        element.textContent = `${(current / 100).toFixed(2)}%`;
+
+        if (current === scaledTarget) {
+            clearInterval(interval);
+        }
+    }, 10);
+};
+
+const metricObserver = new IntersectionObserver(
+    (entries, obs) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                animateMetricValue(entry.target);
+                obs.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.6 }
+);
+
+metricValues.forEach((value) => {
+    value.textContent = '0.00%';
+    metricObserver.observe(value);
 });
