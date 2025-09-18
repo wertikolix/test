@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Механика Искусственного Интеллекта</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="pixel-grid"></div>
+
+    <header class="hero" id="top">
+        <nav class="nav">
+            <a class="logo" href="#top">∷ SYNTH-LAB</a>
+            <div class="nav__links">
+                <a href="#layers">Слои</a>
+                <a href="#pulse">Процесс</a>
+                <a href="#gallery">Визуал</a>
+                <a href="#ethics">Баланс</a>
+            </div>
+        </nav>
+        <div class="hero__content">
+            <div class="hero__text">
+                <span class="badge">ЧЕРНО-БЕЛАЯ МЕХАНИКА</span>
+                <h1>Как мыслит искусственный интеллект</h1>
+                <p>
+                    Мы собрали путешествие по нейронным лабиринтам — от отблесков пикселей до математической поэзии.
+                    Вникайте в слои модели, наблюдайте, как данные превращаются в инсайт, и почувствуйте ритм машинного сознания.
+                </p>
+                <div class="cta">
+                    <a class="button button--primary" href="#layers">Исследовать слои</a>
+                    <a class="button button--ghost" href="#pulse">Слушать пульс</a>
+                </div>
+            </div>
+            <div class="hero__visual">
+                <div class="sphere">
+                    <div class="sphere__orbit"></div>
+                    <div class="sphere__pulse"></div>
+                    <div class="sphere__pixel sphere__pixel--one"></div>
+                    <div class="sphere__pixel sphere__pixel--two"></div>
+                    <div class="sphere__pixel sphere__pixel--three"></div>
+                </div>
+                <p class="hero__caption">Голографический профиль модели — энергия в цифре</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="layer" id="layers">
+            <div class="section__label">01</div>
+            <h2>Слои восприятия</h2>
+            <div class="layer__grid">
+                <article class="layer__card">
+                    <h3>Сенсорный вход</h3>
+                    <p>
+                        Потоки данных проходят очистку и нормализацию. Пиксели превращаются в векторы, звуки — в спектры,
+                        текст — в токены. Всё строго, как в лаборатории Nothing.
+                    </p>
+                </article>
+                <article class="layer__card">
+                    <h3>Скрытая синтезация</h3>
+                    <p>
+                        Веса и матрицы взаимодействуют, создавая абстракции. Каждое вычисление — как ритм пиксельного света.
+                    </p>
+                </article>
+                <article class="layer__card">
+                    <h3>Предсказательный импульс</h3>
+                    <p>
+                        Финальный слой собирает вероятностный ответ. Мы фиксируем интенсивность импульса и направляем его в интерфейс.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="pulse" id="pulse">
+            <div class="section__label">02</div>
+            <h2>Пульс вычислений</h2>
+            <p class="pulse__intro">
+                Нейронная сеть — это оркестр сигналов. Каждое «биение» — это умножение матриц, нормализация и функция активации.
+                Мы визуализировали сердечный ритм ИИ — наведите курсор и почувствуйте синкопы данных.
+            </p>
+            <div class="pulse__timeline">
+                <div class="pulse__line"></div>
+                <div class="pulse__node" data-year="Предобработка" data-info="Фильтрация и стандартизация входных данных."></div>
+                <div class="pulse__node" data-year="Выделение признаков" data-info="Конволюции и трансформеры создают смысл."></div>
+                <div class="pulse__node" data-year="Решение" data-info="Выбор реакции, генерация ответа."></div>
+                <div class="pulse__node" data-year="Обратная связь" data-info="Обучение, корректировка весов, рост интеллекта."></div>
+            </div>
+            <div class="pulse__tooltip" id="pulseTooltip">
+                <span class="pulse__tooltip-year"></span>
+                <span class="pulse__tooltip-info"></span>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="section__label">03</div>
+            <h2>Пиксельные гипотезы</h2>
+            <div class="gallery__grid">
+                <figure class="gallery__item gallery__item--large">
+                    <div class="scanlines"></div>
+                    <div class="gallery__glow"></div>
+                    <figcaption>Локализация паттернов</figcaption>
+                </figure>
+                <figure class="gallery__item">
+                    <div class="scanlines"></div>
+                    <figcaption>Перцептивные матрицы</figcaption>
+                </figure>
+                <figure class="gallery__item">
+                    <div class="scanlines"></div>
+                    <figcaption>Интерференция шума</figcaption>
+                </figure>
+                <figure class="gallery__item gallery__item--wide">
+                    <div class="scanlines"></div>
+                    <figcaption>Контроль вероятностей</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="ethics" id="ethics">
+            <div class="section__label">04</div>
+            <h2>Этика и баланс</h2>
+            <div class="ethics__grid">
+                <div class="ethics__statement">
+                    <p>
+                        Искусственный интеллект — не только алгоритмы, но и ответственность. Мы строим прозрачные системы, следим за справедливостью моделей
+                        и уважаем человеческий выбор. Баланс между эффективностью и эмпатией поддерживается контролем качества и аудитом.
+                    </p>
+                    <a class="button button--ghost" href="#top">Назад к началу</a>
+                </div>
+                <div class="ethics__matrix">
+                    <div class="matrix__line"></div>
+                    <div class="matrix__line"></div>
+                    <div class="matrix__line"></div>
+                    <div class="matrix__line"></div>
+                    <div class="matrix__line"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 SYNTH-LAB. Вдохновлено Nothing. Сеть дышит чёрно-белыми пикселями.</p>
+        <div class="footer__links">
+            <a href="#layers">Структура</a>
+            <a href="#pulse">Ритм</a>
+            <a href="#ethics">Ответственность</a>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
