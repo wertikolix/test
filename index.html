@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Workstation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="boot-screen" role="presentation">
+      <div class="boot-screen__overlay">
+        <div class="boot-screen__logo">AMERICAN MEGATRENDS</div>
+        <div class="boot-screen__log" aria-live="polite"></div>
+        <div class="boot-screen__progress">
+          <div class="boot-screen__progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="desktop" aria-label="Windows 95 inspired workspace" hidden>
+      <div class="desktop__icons" role="list">
+        <button type="button" class="desktop-icon" data-window="system-window" role="listitem">
+          <span class="desktop-icon__image icon icon--computer" aria-hidden="true"></span>
+          <span class="desktop-icon__label">My Computer</span>
+        </button>
+        <button type="button" class="desktop-icon" data-window="projects-window" role="listitem">
+          <span class="desktop-icon__image icon icon--folder" aria-hidden="true"></span>
+          <span class="desktop-icon__label">Projects</span>
+        </button>
+        <button type="button" class="desktop-icon" data-window="bin-window" role="listitem">
+          <span class="desktop-icon__image icon icon--bin" aria-hidden="true"></span>
+          <span class="desktop-icon__label">Recycle Bin</span>
+        </button>
+      </div>
+
+      <div class="window" id="system-window" role="dialog" aria-modal="false" aria-labelledby="system-window-title">
+        <div class="window__titlebar" data-draggable="true">
+          <div class="window__title">
+            <span class="window__icon icon icon--computer" aria-hidden="true"></span>
+            <span id="system-window-title">System Properties</span>
+          </div>
+          <div class="window__controls">
+            <button type="button" class="window__btn window__btn--min" data-action="minimize" aria-label="Minimize window">&#95;</button>
+            <button type="button" class="window__btn window__btn--max" data-action="maximize" aria-label="Maximize window">&#9633;</button>
+            <button type="button" class="window__btn window__btn--close" data-action="close" aria-label="Close window">&#10005;</button>
+          </div>
+        </div>
+        <div class="window__content">
+          <section class="window__group">
+            <h2 class="window__heading">System Check</h2>
+            <ul class="bios-list">
+              <li>CPU Detected: Pentium&reg; Pro 200 MHz</li>
+              <li>Memory Test: 131072K OK</li>
+              <li>L2 Cache: 512K Enabled</li>
+              <li>Video BIOS: VGA Compatible</li>
+            </ul>
+          </section>
+          <section class="window__group">
+            <h2 class="window__heading">Drives</h2>
+            <ul class="bios-list">
+              <li>Primary Master: Quantum Fireball 4.3GB</li>
+              <li>Primary Slave: None</li>
+              <li>Secondary Master: ATAPI CD-ROM</li>
+              <li>Secondary Slave: 1.44MB 3&#189;" Floppy</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <div class="window" id="projects-window" role="dialog" aria-modal="false" aria-labelledby="projects-window-title">
+        <div class="window__titlebar" data-draggable="true">
+          <div class="window__title">
+            <span class="window__icon icon icon--folder" aria-hidden="true"></span>
+            <span id="projects-window-title">Projects</span>
+          </div>
+          <div class="window__controls">
+            <button type="button" class="window__btn window__btn--min" data-action="minimize" aria-label="Minimize window">&#95;</button>
+            <button type="button" class="window__btn window__btn--max" data-action="maximize" aria-label="Maximize window">&#9633;</button>
+            <button type="button" class="window__btn window__btn--close" data-action="close" aria-label="Close window">&#10005;</button>
+          </div>
+        </div>
+        <div class="window__content window__content--projects">
+          <div class="projects-intro">
+            <p class="projects-intro__lead">Projects directory</p>
+            <p class="projects-intro__text">Nothing found.. :(</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="window" id="bin-window" role="dialog" aria-modal="false" aria-labelledby="bin-window-title">
+        <div class="window__titlebar" data-draggable="true">
+          <div class="window__title">
+            <span class="window__icon icon icon--bin" aria-hidden="true"></span>
+            <span id="bin-window-title">Recycle Bin</span>
+          </div>
+          <div class="window__controls">
+            <button type="button" class="window__btn window__btn--min" data-action="minimize" aria-label="Minimize window">&#95;</button>
+            <button type="button" class="window__btn window__btn--max" data-action="maximize" aria-label="Maximize window">&#9633;</button>
+            <button type="button" class="window__btn window__btn--close" data-action="close" aria-label="Close window">&#10005;</button>
+          </div>
+        </div>
+        <div class="window__content">
+          <p>The recycle bin is empty.</p>
+        </div>
+      </div>
+
+      <footer class="taskbar" role="toolbar" aria-label="Taskbar">
+        <button class="taskbar__start">
+          <span class="taskbar__start-icon">&#10066;</span>
+          <span>Start</span>
+        </button>
+        <div class="taskbar__tray" aria-live="polite"></div>
+        <div class="taskbar__clock" aria-live="polite"></div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
