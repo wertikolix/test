@@ -1,0 +1,238 @@
+:root {
+  color-scheme: dark;
+  --bg-base: #050817;
+  --accent-1: #40c9ff;
+  --accent-2: #b66dff;
+  --accent-3: #ff9d6c;
+  --text-strong: #f6f7ff;
+  --text-muted: rgba(239, 241, 255, 0.78);
+  --card-bg: rgba(11, 16, 37, 0.72);
+  --card-border: rgba(130, 150, 255, 0.24);
+  --glass-blur: 18px;
+  --max-width: min(92vw, 1100px);
+  --transition-speed: 260ms;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(59, 95, 255, 0.25), transparent 55%),
+    radial-gradient(circle at 80% 15%, rgba(255, 93, 177, 0.22), transparent 50%),
+    radial-gradient(circle at 50% 75%, rgba(47, 255, 204, 0.18), transparent 50%),
+    var(--bg-base);
+  color: var(--text-strong);
+  font-family: inherit;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.06)' stroke-width='0.5'%3E%3Cpath d='M0 80 Q40 20 80 80 T160 80'/%3E%3Cpath d='M0 110 Q60 60 110 110 T220 110'/%3E%3C/g%3E%3C/svg%3E")
+    repeat;
+  opacity: 0.3;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+main.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  z-index: 1;
+}
+
+.hero__content {
+  width: var(--max-width);
+  padding: clamp(1rem, 3vw, 2.5rem);
+  border-radius: 32px;
+  backdrop-filter: blur(var(--glass-blur));
+  background: linear-gradient(120deg, rgba(11, 19, 40, 0.75), rgba(11, 19, 40, 0.25));
+  border: 1px solid var(--card-border);
+  box-shadow: 0 40px 120px rgba(8, 11, 33, 0.45);
+  text-align: left;
+}
+
+.hero__eyebrow {
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.hero__title {
+  font-size: clamp(2.7rem, 6vw, 4.2rem);
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.hero__subtitle {
+  margin: 0 0 2rem;
+  color: var(--text-muted);
+  max-width: 52ch;
+  line-height: 1.8;
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: var(--text-strong);
+  background: linear-gradient(135deg, rgba(64, 201, 255, 0.9), rgba(182, 109, 255, 0.9));
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  box-shadow: 0 18px 40px rgba(64, 201, 255, 0.35);
+}
+
+.hero__cta::after {
+  content: "→";
+  font-size: 1.1em;
+  transition: transform var(--transition-speed) ease;
+}
+
+.hero__cta:hover,
+.hero__cta:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 55px rgba(182, 109, 255, 0.45);
+}
+
+.hero__cta:hover::after,
+.hero__cta:focus-visible::after {
+  transform: translateX(6px);
+}
+
+.hero__cards {
+  width: var(--max-width);
+  margin: clamp(3rem, 6vw, 5rem) auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+.card {
+  padding: clamp(1.5rem, 4vw, 2.8rem);
+  border-radius: 28px;
+  background: linear-gradient(160deg, rgba(8, 12, 27, 0.78), rgba(8, 12, 27, 0.45));
+  border: 1px solid rgba(110, 135, 255, 0.22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 25px 60px rgba(4, 7, 18, 0.55);
+  backdrop-filter: blur(var(--glass-blur));
+  color: var(--text-muted);
+  line-height: 1.7;
+  transition: transform 320ms ease, border-color 320ms ease;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--text-strong);
+  font-size: 1.2rem;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.01);
+  border-color: rgba(182, 109, 255, 0.5);
+}
+
+.parallax {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  perspective: 1200px;
+  z-index: 0;
+}
+
+.layer {
+  position: absolute;
+  inset: -20%;
+  transform-style: preserve-3d;
+  will-change: transform, filter;
+}
+
+.layer--back {
+  background: radial-gradient(circle at 15% 20%, rgba(26, 119, 255, 0.45), transparent 55%),
+    radial-gradient(circle at 85% 45%, rgba(171, 64, 255, 0.35), transparent 52%),
+    radial-gradient(circle at 45% 75%, rgba(255, 145, 66, 0.28), transparent 50%),
+    radial-gradient(circle at 60% 40%, rgba(66, 255, 197, 0.2), transparent 48%);
+  filter: blur(60px);
+}
+
+.layer--mid {
+  background: conic-gradient(from 120deg at 50% 50%, rgba(82, 222, 255, 0.55), rgba(146, 66, 255, 0.4), rgba(255, 128, 100, 0.4), rgba(82, 222, 255, 0.55));
+  mix-blend-mode: screen;
+  opacity: 0.6;
+  filter: blur(50px) saturate(140%);
+}
+
+.layer--front {
+  background: radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.35), transparent 35%),
+    radial-gradient(circle at 70% 60%, rgba(138, 255, 240, 0.45), transparent 45%),
+    radial-gradient(circle at 30% 70%, rgba(233, 137, 255, 0.35), transparent 55%);
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  filter: blur(40px) saturate(120%);
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+}
+
+.particles span {
+  position: absolute;
+  width: var(--size, 120px);
+  height: var(--size, 120px);
+  border-radius: 50%;
+  opacity: 0.75;
+  background: radial-gradient(circle, hsla(var(--hue, 200), 90%, 75%, 0.9) 0%, hsla(var(--hue, 200), 90%, 55%, 0.35) 55%, transparent 100%);
+  filter: blur(var(--blur, 0px));
+  mix-blend-mode: screen;
+  animation: shimmer 12s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate3d(0, 0, 0) scale(1.2);
+    opacity: 1;
+  }
+}
+
+canvas.aurora {
+  position: absolute;
+  inset: -30%;
+  width: 160%;
+  height: 160%;
+  filter: blur(60px) saturate(120%);
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 720px) {
+  .hero__content {
+    text-align: center;
+  }
+  .hero__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__cards {
+    grid-template-columns: 1fr;
+  }
+}

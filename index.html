@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dreamwave Parallax</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="parallax" id="parallax">
+      <div class="layer layer--back" data-depth="0.18"></div>
+      <div class="layer layer--mid" data-depth="0.32"></div>
+      <div class="layer layer--front" data-depth="0.48"></div>
+      <div class="layer particles" data-depth="0.62" id="particles"></div>
+      <canvas class="aurora" id="aurora" data-depth="0.12"></canvas>
+    </div>
+
+    <main class="hero">
+      <header class="hero__content">
+        <p class="hero__eyebrow">Новый уровень фона</p>
+        <h1 class="hero__title">Dreamwave Atmosphere</h1>
+        <p class="hero__subtitle">
+          Глубокий параллакс, живые глоу-частицы и реагирование на курсор превращают
+          фон в перламутровую космическую дымку.
+        </p>
+        <a class="hero__cta" href="#" role="button">Начать вдохновение</a>
+      </header>
+      <section class="hero__cards">
+        <article class="card">
+          <h2>Многослойный парящий свет</h2>
+          <p>
+            Облака мягкого свечения складываются друг на друга с глубиной, создавая
+            ощущение настоящего объемного пространства.
+          </p>
+        </article>
+        <article class="card">
+          <h2>Реакция на каждый жест</h2>
+          <p>
+            Курсор и прокрутка трансформируют композицию, и фон будто двигается вместе
+            с вами.
+          </p>
+        </article>
+        <article class="card">
+          <h2>Субтильная динамика</h2>
+          <p>
+            Частицы и волны медленно переливаются, не отвлекая, а добавляя глубину и
+            стиль интерфейсу.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
