@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио — Черно-белая эстетика</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <header class="glass hero">
+    <div class="hero__badge dotgothic16-regular">Digital artisan</div>
+    <h1 class="hero__title doto-900">Привет, я Егор</h1>
+    <p class="hero__subtitle dotgothic16-regular">Создаю минималистичные цифровые продукты с характером, сочетающие технологичность и эмоциональность.</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#projects">Проекты</a>
+      <a class="btn btn--ghost" href="#contact">Связаться</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="glass section" id="about">
+      <h2 class="section__title doto-700">Обо мне</h2>
+      <div class="section__content">
+        <p class="lead dotgothic16-regular">Я дизайнер и фронтенд-разработчик, создающий сайты и интерфейсы с фокусом на эстетике, плавности и внимании к деталям. Мой подход — это сочетание структурированной типографики, стеклянных поверхностей и чётких акцентов.</p>
+        <ul class="stats">
+          <li class="stats__item">
+            <span class="stats__value doto-500">8+</span>
+            <span class="stats__label dotgothic16-regular">лет опыта</span>
+          </li>
+          <li class="stats__item">
+            <span class="stats__value doto-500">45</span>
+            <span class="stats__label dotgothic16-regular">завершённых проектов</span>
+          </li>
+          <li class="stats__item">
+            <span class="stats__value doto-500">12</span>
+            <span class="stats__label dotgothic16-regular">наград &amp; публикаций</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2 class="section__title doto-700">Проекты</h2>
+      <div class="projects">
+        <article class="project glass">
+          <div class="project__tag dotgothic16-regular">UX / UI</div>
+          <h3 class="project__title doto-500">Сервис для медитаций</h3>
+          <p class="project__description dotgothic16-regular">Чёрно-белый интерфейс, который позволяет пользователю сосредоточиться на дыхании и ощущениях. Плавные микроанимации создают атмосферу спокойствия.</p>
+          <a class="project__link dotgothic16-regular" href="#">Смотреть кейс</a>
+        </article>
+        <article class="project glass">
+          <div class="project__tag dotgothic16-regular">Motion / WebGL</div>
+          <h3 class="project__title doto-500">Иммерсивный лендинг</h3>
+          <p class="project__description dotgothic16-regular">Лендинг с элементами WebGL и стеклянными карточками, создающими эффект глубины. Анимации реагируют на движение курсора.</p>
+          <a class="project__link dotgothic16-regular" href="#">Смотреть кейс</a>
+        </article>
+        <article class="project glass">
+          <div class="project__tag dotgothic16-regular">Art Direction</div>
+          <h3 class="project__title doto-500">Виртуальная галерея</h3>
+          <p class="project__description dotgothic16-regular">Серия интерактивных выставок, где световые контуры и отражения подчёркивают каждую работу. Монохромная палитра и живые тени.</p>
+          <a class="project__link dotgothic16-regular" href="#">Смотреть кейс</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="glass section" id="process">
+      <h2 class="section__title doto-700">Процесс</h2>
+      <ol class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__step doto-400">01</span>
+          <div>
+            <h3 class="timeline__title doto-500">Исследование</h3>
+            <p class="timeline__description dotgothic16-regular">Погружаюсь в контекст, аудиторию и задачи, чтобы сформировать визуальную стратегию и систему смыслов.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__step doto-400">02</span>
+          <div>
+            <h3 class="timeline__title doto-500">Концепция</h3>
+            <p class="timeline__description dotgothic16-regular">Создаю концепт через moodboard, типографику и ключевые экраны. Ищу баланс между технологичностью и эмоцией.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__step doto-400">03</span>
+          <div>
+            <h3 class="timeline__title doto-500">Реализация</h3>
+            <p class="timeline__description dotgothic16-regular">Перевожу концепцию в рабочий продукт: верстаю, интегрирую анимации, тестирую и улучшаю.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section section--split" id="services">
+      <div class="glass split-card">
+        <h2 class="section__title doto-700">Услуги</h2>
+        <ul class="service-list">
+          <li class="service-list__item dotgothic16-regular">Дизайн сайтов и интерфейсов</li>
+          <li class="service-list__item dotgothic16-regular">Микроанимации и Motion</li>
+          <li class="service-list__item dotgothic16-regular">Арт-дирекшн и брендинг</li>
+          <li class="service-list__item dotgothic16-regular">Прототипирование и разработка</li>
+        </ul>
+      </div>
+      <div class="glass split-card">
+        <h2 class="section__title doto-700">Инструменты</h2>
+        <div class="tags">
+          <span class="tag doto-400">Figma</span>
+          <span class="tag doto-400">Framer</span>
+          <span class="tag doto-400">After Effects</span>
+          <span class="tag doto-400">Three.js</span>
+          <span class="tag doto-400">Svelte</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass footer" id="contact">
+    <h2 class="section__title doto-700">Давайте создавать</h2>
+    <p class="footer__text dotgothic16-regular">Открыт к сотрудничеству и новым идеям. Пишите на почту или в мессенджеры.</p>
+    <div class="footer__links">
+      <a class="footer__link doto-400" href="mailto:hello@egor.design">hello@egor.design</a>
+      <a class="footer__link doto-400" href="https://t.me/egor_design">Telegram</a>
+      <a class="footer__link doto-400" href="https://www.behance.net/egor">Behance</a>
+    </div>
+    <p class="footer__copyright dotgothic16-regular">© 2024 Егор Ковалёв. Все права защищены.</p>
+  </footer>
+</body>
+</html>
