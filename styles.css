@@ -45,9 +45,36 @@ body {
     linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 0),
     linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 0);
   background-size: 80px 80px;
+  background-position: center;
   opacity: 0.65;
   z-index: 0;
   animation: gridPulse 12s ease-in-out infinite;
+}
+
+.grid-bg::before,
+.grid-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: 80px 80px;
+  mix-blend-mode: screen;
+  opacity: 0;
+  animation-timing-function: ease-in-out;
+  pointer-events: none;
+}
+
+.grid-bg::before {
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 68%);
+  filter: blur(2px);
+  animation: cellFlashOne 20s infinite;
+}
+
+.grid-bg::after {
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0) 70%);
+  filter: blur(4px);
+  animation: cellFlashTwo 26s infinite;
+  animation-delay: -8s;
 }
 
 .ambient {
@@ -87,6 +114,115 @@ body {
   50% {
     opacity: 0.8;
     transform: scale(1.02);
+  }
+}
+
+@keyframes cellFlashOne {
+  0%,
+  5% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 0.85;
+    background-position: calc(80px * 3) calc(80px * 5);
+  }
+  9% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 0;
+    background-position: calc(80px * 6) calc(80px * 2);
+  }
+  24% {
+    opacity: 0.8;
+  }
+  28% {
+    opacity: 0;
+  }
+  43% {
+    opacity: 0;
+    background-position: calc(80px * 1) calc(80px * 7);
+  }
+  45% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0;
+  }
+  68% {
+    opacity: 0;
+    background-position: calc(80px * 5) calc(80px * 1);
+  }
+  70% {
+    opacity: 0.75;
+  }
+  74% {
+    opacity: 0;
+  }
+  88% {
+    opacity: 0;
+    background-position: calc(80px * 2) calc(80px * 4);
+  }
+  90% {
+    opacity: 0.8;
+  }
+  94%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cellFlashTwo {
+  0%,
+  8% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.65;
+    background-position: calc(80px * 7) calc(80px * 6);
+  }
+  14% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 0;
+    background-position: calc(80px * 4) calc(80px * 3);
+  }
+  34% {
+    opacity: 0.7;
+  }
+  38% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0;
+    background-position: calc(80px * 2) calc(80px * 8);
+  }
+  57% {
+    opacity: 0.75;
+  }
+  62% {
+    opacity: 0;
+  }
+  78% {
+    opacity: 0;
+    background-position: calc(80px * 8) calc(80px * 1);
+  }
+  80% {
+    opacity: 0.7;
+  }
+  84% {
+    opacity: 0;
+  }
+  94% {
+    opacity: 0;
+    background-position: calc(80px * 3) calc(80px * 6);
+  }
+  96% {
+    opacity: 0.65;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
