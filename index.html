@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monochrome Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <nav class="glass site-nav" aria-label="Primary">
+    <span class="site-nav__brand doto-700" aria-hidden="true">AC</span>
+    <ul class="site-nav__list dotgothic16-regular">
+      <li class="site-nav__item"><a class="site-nav__link is-active" href="#about">About</a></li>
+      <li class="site-nav__item"><a class="site-nav__link" href="#projects">Projects</a></li>
+      <li class="site-nav__item"><a class="site-nav__link" href="#process">Process</a></li>
+      <li class="site-nav__item"><a class="site-nav__link" href="#services">Capabilities</a></li>
+      <li class="site-nav__item"><a class="site-nav__link" href="lab.html">Lab</a></li>
+      <li class="site-nav__item"><a class="site-nav__link" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <header class="glass hero">
+    <div class="hero__badge dotgothic16-regular">Creative coder</div>
+    <h1 class="hero__title doto-900">Hello, I'm Alex</h1>
+    <p class="hero__subtitle dotgothic16-regular">I engineer monochrome experiences where precise code, thoughtful motion, and calm aesthetics meet.</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="#projects">Projects</a>
+      <a class="btn btn--ghost" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="glass section" id="about">
+      <h2 class="section__title doto-700">About</h2>
+      <div class="section__content">
+        <p class="lead dotgothic16-regular">I'm a software engineer and creative developer crafting interfaces with a balance of performance, emotion, and meticulous detail. My process blends structured typography, glassmorphism, and responsive interactions.</p>
+        <ul class="stats">
+          <li class="stats__item">
+            <span class="stats__value doto-500">8+</span>
+            <span class="stats__label dotgothic16-regular">years shipping products</span>
+          </li>
+          <li class="stats__item">
+            <span class="stats__value doto-500">45</span>
+            <span class="stats__label dotgothic16-regular">launched builds</span>
+          </li>
+          <li class="stats__item">
+            <span class="stats__value doto-500">12</span>
+            <span class="stats__label dotgothic16-regular">talks &amp; features</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2 class="section__title doto-700">Projects</h2>
+      <div class="projects">
+        <article class="project glass">
+          <div class="project__tag dotgothic16-regular">Frontend / Systems</div>
+          <h3 class="project__title doto-500">Signal Ops Dashboard</h3>
+          <p class="project__description dotgothic16-regular">A realtime operations cockpit for monitoring distributed services. Glass cards surface metrics while smooth transitions guide focus.</p>
+          <a class="project__link dotgothic16-regular" href="#">View case study</a>
+        </article>
+        <article class="project glass">
+          <div class="project__tag dotgothic16-regular">WebGL / Creative Tech</div>
+          <h3 class="project__title doto-500">Generative Playground</h3>
+          <p class="project__description dotgothic16-regular">An interactive canvas powered by shaders and particle systems, letting users sculpt sound-reactive forms in monochrome.</p>
+          <a class="project__link dotgothic16-regular" href="#">View case study</a>
+        </article>
+        <article class="project glass">
+          <div class="project__tag dotgothic16-regular">Documentation</div>
+          <h3 class="project__title doto-500">API Knowledge Base</h3>
+          <p class="project__description dotgothic16-regular">Developer docs with adaptive navigation, live code sandboxes, and ambient motion to keep focus without distraction.</p>
+          <a class="project__link dotgothic16-regular" href="#">View case study</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="glass section" id="process">
+      <h2 class="section__title doto-700">Process</h2>
+      <ol class="timeline">
+        <li class="timeline__item">
+          <span class="timeline__step doto-400">01</span>
+          <div>
+            <h3 class="timeline__title doto-500">Discovery &amp; Scoping</h3>
+            <p class="timeline__description dotgothic16-regular">Dive into product goals, audience, and constraints to outline the technical narrative and experience arc.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__step doto-400">02</span>
+          <div>
+            <h3 class="timeline__title doto-500">Architecture &amp; Design</h3>
+            <p class="timeline__description dotgothic16-regular">Sketch flows, define components, and prototype interactions that bridge clarity, performance, and delight.</p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <span class="timeline__step doto-400">03</span>
+          <div>
+            <h3 class="timeline__title doto-500">Build &amp; Iterate</h3>
+            <p class="timeline__description dotgothic16-regular">Ship accessible, animated experiences, integrate seamlessly, and refine through feedback loops.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section section--split" id="services">
+      <div class="glass split-card">
+        <h2 class="section__title doto-700">Capabilities</h2>
+        <ul class="service-list">
+          <li class="service-list__item dotgothic16-regular">Full-stack product engineering</li>
+          <li class="service-list__item dotgothic16-regular">Creative coding &amp; WebGL prototypes</li>
+          <li class="service-list__item dotgothic16-regular">Design systems &amp; UI engineering</li>
+          <li class="service-list__item dotgothic16-regular">Automation &amp; developer tooling</li>
+        </ul>
+      </div>
+      <div class="glass split-card">
+        <h2 class="section__title doto-700">Core Toolkit</h2>
+        <div class="stack-grid">
+          <article class="stack-pill">
+            <span class="stack-pill__label dotgothic16-regular">Interface</span>
+            <h3 class="stack-pill__title doto-500">TypeScript &amp; React</h3>
+            <p class="stack-pill__description dotgothic16-regular">
+              Component-driven systems, design tokens, and accessible motion choreography.
+            </p>
+          </article>
+          <article class="stack-pill">
+            <span class="stack-pill__label dotgothic16-regular">Platforms</span>
+            <h3 class="stack-pill__title doto-500">Next.js &amp; Node.js</h3>
+            <p class="stack-pill__description dotgothic16-regular">
+              Hybrid rendering, serverless workflows, and resilient API integrations.
+            </p>
+          </article>
+          <article class="stack-pill">
+            <span class="stack-pill__label dotgothic16-regular">Creative Tech</span>
+            <h3 class="stack-pill__title doto-500">Three.js &amp; GLSL</h3>
+            <p class="stack-pill__description dotgothic16-regular">
+              Shader-driven visuals, generative motion, and immersive spatial interactions.
+            </p>
+          </article>
+          <article class="stack-pill">
+            <span class="stack-pill__label dotgothic16-regular">Tooling</span>
+            <h3 class="stack-pill__title doto-500">GraphQL &amp; CI/CD</h3>
+            <p class="stack-pill__description dotgothic16-regular">
+              Robust schema design, automated quality gates, and observability pipelines.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass footer" id="contact">
+    <h2 class="section__title doto-700">Let's build</h2>
+    <p class="footer__text dotgothic16-regular">Open to collaborations and experimental ideas. Reach out for product engineering, creative coding, or technical direction.</p>
+    <div class="footer__links">
+      <a class="footer__link doto-400" href="mailto:hello@alex.dev">hello@alex.dev</a>
+      <a class="footer__link doto-400" href="https://t.me/alex_codes">Telegram</a>
+      <a class="footer__link doto-400" href="https://github.com/alex">GitHub</a>
+    </div>
+    <p class="footer__copyright dotgothic16-regular">© 2024 Alex Carter. All rights reserved.</p>
+  </footer>
+</body>
+</html>
